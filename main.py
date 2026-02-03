@@ -42,6 +42,13 @@ while True:
         visit_count[new_page] = 1
 
      print(f"Visited: {current_page}")
+    elif choice == "2":
+     if not back_stack:
+        print("No page to go back.")
+     else:
+        forward_stack.append(current_page)
+        current_page = back_stack.pop()
+        print(f"Moved back to: {current_page}")
 
     elif choice == "11":
         print("Closing browser")
