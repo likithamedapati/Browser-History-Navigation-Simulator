@@ -93,6 +93,17 @@ while True:
         print(f"{page} visited {visit_count[page]} times.")
      else:
         print("Page not found in history.")
+    elif choice == "9":
+     confirm = input("Are you sure you want to clear history? (yes/no): ").lower()
+
+     if confirm == "yes":
+        back_stack.clear()
+        forward_stack.clear()
+        history_list.clear()
+        visit_count.clear()
+        print("History cleared.")
+     else:
+        print("Cancelled.")
 
     elif choice == "11":
         print("Closing browser")
