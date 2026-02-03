@@ -25,7 +25,24 @@ while True:
     print("11. Exit")
 
     choice = input("Choose an option: ")
+    if choice == "1":
+     new_page = input("Enter page URL: ")
 
-    if choice == "11":
+     if current_page:
+        back_stack.append(current_page)
+
+     current_page = new_page
+     forward_stack.clear()
+
+     history_list.append(new_page)
+
+     if new_page in visit_count:
+        visit_count[new_page] += 1
+     else:
+        visit_count[new_page] = 1
+
+     print(f"Visited: {current_page}")
+
+    elif choice == "11":
         print("Closing browser")
         break
