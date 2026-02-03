@@ -104,7 +104,21 @@ while True:
         print("History cleared.")
      else:
         print("Cancelled.")
+    elif choice == "10":
+     back_stack.append(current_page)
+     current_page = homepage
+     forward_stack.clear()
+     history_list.append(homepage)
+
+     if homepage in visit_count:
+        visit_count[homepage] += 1
+     else:
+        visit_count[homepage] = 1
+
+     print(f"Returned to homepage: {homepage}")
 
     elif choice == "11":
         print("Closing browser")
         break
+    else:
+       print("Invalid choice! try again!...")
