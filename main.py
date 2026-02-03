@@ -86,6 +86,13 @@ while True:
 
      except:
         print("Invalid input.")
+    elif choice == "8":
+     page = input("Enter page name: ")
+
+     if page in visit_count:
+        print(f"{page} visited {visit_count[page]} times.")
+     else:
+        print("Page not found in history.")
 
     elif choice == "11":
         print("Closing browser")
