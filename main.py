@@ -68,6 +68,24 @@ while True:
       else:
         for i, page in enumerate(history_list, start=1):
             print(f"{i}. {page}")
+    elif choice == "7":
+     try:
+        n = int(input("How many recent pages to show? "))
+
+        if n <= 0:
+            print("Enter a positive number.")
+        else:
+            print("\n--- Recent Pages ---")
+            recent = history_list[-n:]
+
+            if not recent:
+                print("No history available.")
+            else:
+                for page in recent:
+                    print(page)
+
+     except:
+        print("Invalid input.")
 
     elif choice == "11":
         print("Closing browser")
