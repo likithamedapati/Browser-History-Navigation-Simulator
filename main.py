@@ -58,6 +58,8 @@ while True:
         print(f"Moved forward to: {current_page}")
     elif choice == "4":
        print(f"Refreshing {current_page}… ")
+    elif choice == "5":
+      print(f"You are currently on: {current_page}")
 
     elif choice == "11":
         print("Closing browser")
