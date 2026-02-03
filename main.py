@@ -60,6 +60,14 @@ while True:
        print(f"Refreshing {current_page}… ")
     elif choice == "5":
       print(f"You are currently on: {current_page}")
+    elif choice == "6":
+      print("\n--- Browser History ---")
+
+      if not history_list:
+        print("No pages visited yet.")
+      else:
+        for i, page in enumerate(history_list, start=1):
+            print(f"{i}. {page}")
 
     elif choice == "11":
         print("Closing browser")
