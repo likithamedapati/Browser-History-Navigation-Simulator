@@ -49,6 +49,13 @@ while True:
         forward_stack.append(current_page)
         current_page = back_stack.pop()
         print(f"Moved back to: {current_page}")
+    elif choice == "3":
+     if not forward_stack:
+        print("No page to go forward.")
+     else:
+        back_stack.append(current_page)
+        current_page = forward_stack.pop()
+        print(f"Moved forward to: {current_page}")
 
     elif choice == "11":
         print("Closing browser")
